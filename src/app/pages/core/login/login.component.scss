@@ -1,0 +1,23 @@
+.login-container {
+    
+    display: flex;
+    justify-content: center;
+ 
+    .example-card {
+        max-width: 400px;
+        margin-top: 100px;
+    }
+      
+    .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    }
+
+    .action-login-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+  

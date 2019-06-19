@@ -1,0 +1,8 @@
+core
+    home
+    menu
+    login
+
+
+catalogo
+carrito
