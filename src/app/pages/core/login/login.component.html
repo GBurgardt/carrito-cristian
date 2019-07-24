@@ -8,7 +8,6 @@
         </mat-card-header>
         <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
 
-
         <mat-card-content>
             <div>
                 <mat-form-field class="example-form-field">
@@ -20,11 +19,12 @@
                     <input matInput type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
                 </mat-form-field>
             </div>
+            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
         </mat-card-content>
 
         <mat-card-actions class="action-login-container">
-            <button mat-button>Ingresar</button>
-            <button mat-button>Registrar</button>
+            <button style="margin: 10px;" mat-raised-button (click)="onLogin()">Ingresar</button>
+            <button mat-raised-button (click)="onRegister()">Registrar</button>
         </mat-card-actions>
 
     </mat-card>
