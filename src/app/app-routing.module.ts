@@ -5,6 +5,7 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { LoginComponent } from './pages/core/login/login.component';
 
 const routes: Routes = [
+    {path: '**', redirectTo: '/login' },
     {
         path: 'home',
         component: HomeComponent,

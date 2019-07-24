@@ -6,3 +6,6 @@ core
 
 catalogo
 carrito
+
+Pendientes de desarrollo
+- toolbar
