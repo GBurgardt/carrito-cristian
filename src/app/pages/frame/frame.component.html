@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+      <span class="toolbar-title">Shopping e-commmerce</span>
+
+      <!-- This fills the remaining space of the current row -->
+      <span class="fill-remaining-space"></span>
+
+      <span class="toolbar-icon">
+        <span style="margin-top: 8px;">
+          <mat-search-bar></mat-search-bar>
+        </span>
+        <button type="button" mat-icon-button>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <button type="button" mat-icon-button>
+          <i class="fas fa-user-circle"></i>
+        </button>
+      </span>
+    </mat-toolbar>
+
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

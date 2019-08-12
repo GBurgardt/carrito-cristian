@@ -2,16 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from 'src/app/pages/core/home/home.component';
 
-import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSpinner, MatProgressSpinnerModule } from '@angular/material';
+import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSpinner, MatProgressSpinnerModule, MatIconModule } from '@angular/material';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { MenuComponent } from './pages/core/menu/menu.component';
 import { LoginComponent } from './pages/core/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './pages/component/app.component';
+import { FrameComponent } from './pages/frame/frame.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +23,12 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CatalogoComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    FrameComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -33,7 +39,10 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    LayoutModule,
+    MatIconModule,
+    NgMatSearchBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
